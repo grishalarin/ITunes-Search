@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Test Project</string>
+
+    <!--Search-->
+    <string name="search_title">Поиск</string>
+
+    <!--Album Fragment-->
+    <string name="album_fragment_track_count">Количество треков: %1$d</string>
+    <string name="album_fragment_country">Страна: %1$s</string>
+    <string name="album_fragment_release_date">Дата выпуска: %1$s</string>
+    <string name="album_fragment_genre">Жанр: %1$s</string>
+    <string name="album_fragment_price">Цена альбома: %1$d %2$s</string>
+    <string name="item_track_number">%1$d.</string>
+</resources>
