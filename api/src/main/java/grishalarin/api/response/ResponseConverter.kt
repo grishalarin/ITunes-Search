@@ -9,7 +9,7 @@ import javax.inject.Inject
 /**
  * @author Sostavkin Grisha
  */
-class ResponseConverter @Inject internal constructor(private val retrofit: Retrofit){
+class ResponseConverter @Inject internal constructor(private val retrofit: Retrofit) {
 
     private val logger = LoggerFactory.getLogger(ResponseConverter::class)
 
@@ -21,7 +21,7 @@ class ResponseConverter @Inject internal constructor(private val retrofit: Retro
      * @return Ответ сервера в виде сущности типа [E]
      * @throws ApiException В случае ошибки  ковертации*/
     @Throws(ApiException::class)
-    fun <E> convertToEntity(retrofitResponse: retrofit2.Response<E>) : E? {
+    fun <E> convertToEntity(retrofitResponse: retrofit2.Response<E>): E? {
         val response = convert(retrofitResponse)
         if (response.isSuccessful) {
             return response.data
@@ -49,7 +49,8 @@ class ResponseConverter @Inject internal constructor(private val retrofit: Retro
                 ?: throw ApiException(retrofitResponse.code())
             try {
                 // Пробуем десериализовать ошибку из JSON
-                val errorConverter = retrofit.responseBodyConverter<ApiError>(ApiError::class.java, arrayOfNulls(0))
+                val errorConverter =
+                    retrofit.responseBodyConverter<ApiError>(ApiError::class.java, arrayOfNulls(0))
                 val apiError = errorConverter.convert(responseBody)
                 if (apiError != null) {
                     // Если удалось десериализовать ошибку, возвращаем её

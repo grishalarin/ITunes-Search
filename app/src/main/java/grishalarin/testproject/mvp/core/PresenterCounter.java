@@ -2,9 +2,10 @@ package grishalarin.testproject.mvp.core;
 
 import androidx.annotation.NonNull;
 
-import javax.inject.Inject;
 import java.util.HashMap;
 import java.util.Map;
+
+import javax.inject.Inject;
 
 /**
  * @author Sostavkin Grisha

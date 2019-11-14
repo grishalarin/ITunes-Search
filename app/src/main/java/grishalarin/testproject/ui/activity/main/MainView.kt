@@ -5,6 +5,6 @@ import grishalarin.testproject.mvp.view.MvpView
 /**
  * @author Sostavkin Grisha
  */
-interface MainView: MvpView {
+interface MainView : MvpView {
     fun onNavigateToEntryPoint()
 }

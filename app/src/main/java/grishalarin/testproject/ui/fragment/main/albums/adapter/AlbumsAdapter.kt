@@ -46,7 +46,8 @@ class AlbumsAdapter @Inject constructor() : RecyclerView.Adapter<AlbumsAdapter.V
 
         fun bind(album: Album) {
             albumName.text = album.collectionCensoredName
-            Picasso.get().load(album.artworkUrl100).placeholder(R.drawable.placeholder).fit().into(image)
+            Picasso.get().load(album.artworkUrl100).placeholder(R.drawable.placeholder).fit()
+                .into(image)
             artistName.text = album.artistName
             itemView.setOnClickListener { itemListener?.invoke(album) }
         }

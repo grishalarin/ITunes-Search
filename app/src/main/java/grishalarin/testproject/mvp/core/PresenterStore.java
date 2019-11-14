@@ -1,11 +1,13 @@
 package grishalarin.testproject.mvp.core;
 
 import androidx.annotation.NonNull;
-import grishalarin.testproject.mvp.presenter.MvpPresenter;
 
-import javax.inject.Inject;
 import java.util.HashMap;
 import java.util.Map;
+
+import javax.inject.Inject;
+
+import grishalarin.testproject.mvp.presenter.MvpPresenter;
 
 /**
  * @author Sostavkin Grisha

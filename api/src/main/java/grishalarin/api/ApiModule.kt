@@ -15,8 +15,9 @@ import javax.inject.Singleton
  * @author Sostavkin Grisha
  */
 @Module
-class ApiModule(private val apiConfig: ApiConfig,
-                private val applicationInfo: ApplicationInfo
+class ApiModule(
+    private val apiConfig: ApiConfig,
+    private val applicationInfo: ApplicationInfo
 ) {
 
     @Provides
@@ -33,8 +34,9 @@ class ApiModule(private val apiConfig: ApiConfig,
 
     @Provides
     @Singleton
-    internal fun apiWorker(retrofit: Retrofit,
-                           responseConverter: ResponseConverter
+    internal fun apiWorker(
+        retrofit: Retrofit,
+        responseConverter: ResponseConverter
     ): ApiWorker {
         val api = retrofit.create(Api::class.java)
         return DefaultApiWorker(api, responseConverter)
@@ -42,8 +44,8 @@ class ApiModule(private val apiConfig: ApiConfig,
 
     @Provides
     @Singleton
-    fun retrofit(apiRetrofitBuilder: ApiRetrofitBuilder): Retrofit{
-        return  apiRetrofitBuilder.build()
+    fun retrofit(apiRetrofitBuilder: ApiRetrofitBuilder): Retrofit {
+        return apiRetrofitBuilder.build()
     }
 
     @Provides

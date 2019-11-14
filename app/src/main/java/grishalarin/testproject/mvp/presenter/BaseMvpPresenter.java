@@ -1,6 +1,7 @@
 package grishalarin.testproject.mvp.presenter;
 
 import androidx.annotation.NonNull;
+
 import grishalarin.testproject.mvp.view.MvpView;
 
 /**

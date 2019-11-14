@@ -1,9 +1,9 @@
 package grishalarin.testproject.mvp.viewstate;
 
-import grishalarin.testproject.mvp.view.MvpView;
-
 import java.util.ArrayList;
 import java.util.List;
+
+import grishalarin.testproject.mvp.view.MvpView;
 
 /**
  * @author Sostavkin Grisha

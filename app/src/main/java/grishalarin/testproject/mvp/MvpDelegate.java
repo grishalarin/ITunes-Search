@@ -1,13 +1,15 @@
 package grishalarin.testproject.mvp;
 
 import android.os.Bundle;
+
 import androidx.annotation.NonNull;
-import grishalarin.testproject.mvp.presenter.MvpPresenter;
-import grishalarin.testproject.mvp.core.MvpProcessor;
-import grishalarin.testproject.mvp.view.MvpView;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import grishalarin.testproject.mvp.core.MvpProcessor;
+import grishalarin.testproject.mvp.presenter.MvpPresenter;
+import grishalarin.testproject.mvp.view.MvpView;
 
 /**
  * @author Sostavkin Grisha

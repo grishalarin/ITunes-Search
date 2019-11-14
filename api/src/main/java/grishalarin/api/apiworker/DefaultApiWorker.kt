@@ -17,7 +17,12 @@ class DefaultApiWorker(
 ) : ApiWorker {
 
     override fun getSearchAlbumModelsResponse(searchText: String): Single<Response<AlbumsResponse>> {
-        return api.getSearchAlbumModels(searchText, BuildConfig.COUNTRY, BuildConfig.MEDIA,BuildConfig.ALBUM_ENTITY)
+        return api.getSearchAlbumModels(
+            searchText,
+            BuildConfig.COUNTRY,
+            BuildConfig.MEDIA,
+            BuildConfig.ALBUM_ENTITY
+        )
             .map { response -> responseConverter.convert(response) }
     }
 

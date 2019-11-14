@@ -1,8 +1,8 @@
 package grishalarin.testproject.ui.activity.main
 
 import dagger.Subcomponent
-import grishalarin.testproject.ui.activity.base.ActivityModule
 import grishalarin.testproject.dagger.ScreenScope
+import grishalarin.testproject.ui.activity.base.ActivityModule
 
 /**
  * @author Sostavkin Grisha

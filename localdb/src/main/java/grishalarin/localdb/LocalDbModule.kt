@@ -17,8 +17,8 @@ class LocalDbModule(private val context: Context) {
     @Provides
     @Singleton
     fun appDatabase() = Room.databaseBuilder(context, AppDatabase::class.java, DB_NAME)
-            .fallbackToDestructiveMigration()
-            .build()
+        .fallbackToDestructiveMigration()
+        .build()
 
     @Provides
     fun dbTransaction(appDatabase: AppDatabase): DbTransaction = DbTransactionImpl(appDatabase)

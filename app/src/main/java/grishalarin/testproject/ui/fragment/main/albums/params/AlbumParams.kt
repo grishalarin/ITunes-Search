@@ -29,25 +29,25 @@ class AlbumParams(
     var primaryGenreName: String
 ) : Parcelable {
     constructor(source: Parcel) : this(
-    source.readLong(),
-    source.readInt(),
-    source.readString()!!,
-    source.readString()!!,
-    source.readInt(),
-    source.readString()!!,
-    source.readString()!!,
-    source.readString()!!,
-    source.readString()!!,
-    source.readString()!!,
-    source.readString()!!,
-    source.readInt(),
-    source.readString()!!,
-    source.readInt(),
-    source.readString()!!,
-    source.readString()!!,
-    source.readString()!!,
-    source.readSerializable() as Date,
-    source.readString()!!
+        source.readLong(),
+        source.readInt(),
+        source.readString()!!,
+        source.readString()!!,
+        source.readInt(),
+        source.readString()!!,
+        source.readString()!!,
+        source.readString()!!,
+        source.readString()!!,
+        source.readString()!!,
+        source.readString()!!,
+        source.readInt(),
+        source.readString()!!,
+        source.readInt(),
+        source.readString()!!,
+        source.readString()!!,
+        source.readString()!!,
+        source.readSerializable() as Date,
+        source.readString()!!
     )
 
     override fun describeContents() = 0

@@ -13,6 +13,7 @@ interface ApiComponent {
      * [OkHttpClient] для приложения
      */
     fun httpClient(): OkHttpClient
+
     /**
      * [Retrofit] для работы с API
      */

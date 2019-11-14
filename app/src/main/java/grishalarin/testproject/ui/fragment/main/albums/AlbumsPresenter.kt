@@ -16,10 +16,11 @@ import javax.inject.Inject
 /**
  * @author Sostavkin Grisha
  */
-class AlbumsPresenter @Inject constructor(viewState: AlbumsViewState,
-                                          private val albumsLoader: AlbumsLoader,
-                                          private val navigator: Navigator)
-    : BaseMvpViewStatePresenter<AlbumsView, AlbumsViewState>(viewState){
+class AlbumsPresenter @Inject constructor(
+    viewState: AlbumsViewState,
+    private val albumsLoader: AlbumsLoader,
+    private val navigator: Navigator
+) : BaseMvpViewStatePresenter<AlbumsView, AlbumsViewState>(viewState) {
 
     private var disposableLoader: Disposable = Disposables.disposed()
     private val logger = LoggerFactory.getLogger(AlbumsPresenter::class)
@@ -41,22 +42,40 @@ class AlbumsPresenter @Inject constructor(viewState: AlbumsViewState,
         applySearch(search)
     }
 
-    fun onSearchCloseButtonClicked(){
+    fun onSearchCloseButtonClicked() {
         disposableLoader.dispose()
         disposableLoader = albumsLoader.getAlbumsFromDb()
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
-            .subscribe({albums ->
+            .subscribe({ albums ->
                 view.setData(albums.filterByCollectionName())
-            }){
+            }) {
                 logger.error(it)
             }
     }
 
-    fun onAlbumClicked(album: Album){
-        val params = AlbumParams(album.id,album.artistId,album.wrapperType,album.collectionType,album.amgArtistId,album.artistName,
-            album.collectionCensoredName,album.artistViewUrl,album.collectionViewUrl,album.artworkUrl60,album.artworkUrl100,album.collectionPrice,
-            album.collectionExplicitness,album.trackCount,album.copyright,album.country,album.currency,album.releaseDate,album.primaryGenreName)
+    fun onAlbumClicked(album: Album) {
+        val params = AlbumParams(
+            album.id,
+            album.artistId,
+            album.wrapperType,
+            album.collectionType,
+            album.amgArtistId,
+            album.artistName,
+            album.collectionCensoredName,
+            album.artistViewUrl,
+            album.collectionViewUrl,
+            album.artworkUrl60,
+            album.artworkUrl100,
+            album.collectionPrice,
+            album.collectionExplicitness,
+            album.trackCount,
+            album.copyright,
+            album.country,
+            album.currency,
+            album.releaseDate,
+            album.primaryGenreName
+        )
         navigator.navigateToAlbum(params)
     }
 
@@ -70,9 +89,9 @@ class AlbumsPresenter @Inject constructor(viewState: AlbumsViewState,
         disposableLoader = albumsLoader.getAlbums("")
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
-            .subscribe ({ albums ->
+            .subscribe({ albums ->
                 view.setData(albums.filterByCollectionName())
-            },{
+            }, {
                 logger.error(it)
             })
     }
@@ -82,9 +101,9 @@ class AlbumsPresenter @Inject constructor(viewState: AlbumsViewState,
         disposableLoader = albumsLoader.getAlbumsFromDb()
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
-            .subscribe({albums ->
+            .subscribe({ albums ->
                 view.setData(albums.filterByCollectionName())
-            },{
+            }, {
                 logger.error(it)
             })
     }
@@ -96,7 +115,7 @@ class AlbumsPresenter @Inject constructor(viewState: AlbumsViewState,
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({ albums ->
                 view.setData(albums.filterByCollectionName())
-            },{
+            }, {
                 logger.error(it)
             })
     }

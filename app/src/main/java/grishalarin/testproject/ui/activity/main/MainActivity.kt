@@ -36,7 +36,8 @@ class MainActivity : MvpActivity(), MainView {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_activity)
 
-        presenter = getMvpDelegate().getPresenter({ component.mainPresenter() }, MainPresenter::class.java)
+        presenter =
+            getMvpDelegate().getPresenter({ component.mainPresenter() }, MainPresenter::class.java)
         presenter.initialize()
     }
 

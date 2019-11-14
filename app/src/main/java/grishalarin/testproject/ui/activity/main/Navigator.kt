@@ -13,17 +13,17 @@ import javax.inject.Inject
 @ScreenScope
 class Navigator @Inject constructor(private val fragmentNavigator: FragmentNavigator) {
 
-    fun navigateToAlbums(){
+    fun navigateToAlbums() {
         val fragment = { AlbumsFragment.newInstance() }
-        fragmentNavigator.newChain(fragment,Screen.ALBUMS)
+        fragmentNavigator.newChain(fragment, Screen.ALBUMS)
     }
 
-    fun navigateToAlbum(params: AlbumParams){
-        val fragment = { AlbumFragment.newInstance(params)}
-        fragmentNavigator.forward(fragment,Screen.ALBUM)
+    fun navigateToAlbum(params: AlbumParams) {
+        val fragment = { AlbumFragment.newInstance(params) }
+        fragmentNavigator.forward(fragment, Screen.ALBUM)
     }
 
-    object Screen{
+    object Screen {
         const val ALBUMS = "ALBUMS"
         const val ALBUM = "ALBUM"
     }

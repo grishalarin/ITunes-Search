@@ -28,7 +28,7 @@
             app:layout_constraintBottom_toTopOf="@+id/fragment_album_track_count"
             app:layout_constraintEnd_toStartOf="@+id/image_guideline"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
             android:id="@+id/fragment_album_artist_name"

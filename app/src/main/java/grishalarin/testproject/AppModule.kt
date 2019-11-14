@@ -4,7 +4,6 @@ import android.app.Application
 import android.content.Context
 import dagger.Module
 import dagger.Provides
-import org.mapstruct.Mapper
 import javax.inject.Singleton
 
 /**

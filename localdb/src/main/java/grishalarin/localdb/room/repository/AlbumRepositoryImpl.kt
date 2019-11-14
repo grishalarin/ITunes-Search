@@ -13,7 +13,7 @@ import javax.inject.Singleton
  * @author Sostavkin Grisha
  */
 @Singleton
-class AlbumRepositoryImpl  @Inject constructor(appDatabase: AppDatabase) :
+class AlbumRepositoryImpl @Inject constructor(appDatabase: AppDatabase) :
     ModelRepositoryWithLongId<Album, AlbumEntity>(appDatabase), AlbumRepository {
 
     override val mapper = AlbumsMapper

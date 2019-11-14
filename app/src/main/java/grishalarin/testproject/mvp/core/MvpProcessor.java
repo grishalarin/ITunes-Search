@@ -1,11 +1,12 @@
 package grishalarin.testproject.mvp.core;
 
 import androidx.annotation.NonNull;
-import grishalarin.testproject.mvp.PresenterProvider;
-import grishalarin.testproject.mvp.presenter.MvpPresenter;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
+
+import grishalarin.testproject.mvp.PresenterProvider;
+import grishalarin.testproject.mvp.presenter.MvpPresenter;
 
 /**
  * @author Sostavkin Grisha

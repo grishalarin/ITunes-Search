@@ -1,7 +1,9 @@
 package grishalarin.testproject.ui.fragment.main.album
 
 import android.os.Bundle
-import android.view.*
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.DividerItemDecoration
@@ -66,7 +68,7 @@ class AlbumFragment : MvpFragment(), AlbumView {
         return view
     }
 
-    private fun initViews(view: View){
+    private fun initViews(view: View) {
         image = view.findViewById(R.id.album_image)
         artistName = view.findViewById(R.id.fragment_album_artist_name)
         albumName = view.findViewById(R.id.fragment_album_collection_censore_name)
@@ -88,13 +90,16 @@ class AlbumFragment : MvpFragment(), AlbumView {
     }
 
     override fun setDataToViews(album: AlbumParams) {
-        Picasso.get().load(album.artworkUrl100).resize(IMAGE_WIDTH,IMAGE_HEIGHT).into(image)
+        Picasso.get().load(album.artworkUrl100).resize(IMAGE_WIDTH, IMAGE_HEIGHT).into(image)
         artistName.text = album.artistName
         albumName.text = album.collectionCensoredName
-        trackCount.text = getString(R.string.album_fragment_track_count,album.trackCount)
-        releaseDate.text = getString(R.string.album_fragment_release_date, presenter.convertDate(album.releaseDate))
+        trackCount.text = getString(R.string.album_fragment_track_count, album.trackCount)
+        releaseDate.text = getString(
+            R.string.album_fragment_release_date,
+            presenter.convertDate(album.releaseDate)
+        )
         genre.text = getString(R.string.album_fragment_genre, album.primaryGenreName)
-        price.text = getString(R.string.album_fragment_price,album.collectionPrice, album.currency)
+        price.text = getString(R.string.album_fragment_price, album.collectionPrice, album.currency)
     }
 
     override fun setDataToAdapter(tracks: List<Track>) {

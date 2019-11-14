@@ -6,8 +6,7 @@ import javax.inject.Inject
 /**
  * @author Sostavkin Grisha
  */
-class MainViewState @Inject constructor()
-    : BaseMvpViewState<MainView>(), MainView {
+class MainViewState @Inject constructor() : BaseMvpViewState<MainView>(), MainView {
 
     override fun onViewAttached(view: MainView) {}
 

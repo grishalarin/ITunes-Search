@@ -14,7 +14,6 @@ import grishalarin.testproject.R
 import grishalarin.testproject.ui.activity.main.MainActivity
 import grishalarin.testproject.ui.fragment.base.MvpFragment
 import grishalarin.testproject.ui.fragment.main.albums.adapter.AlbumsAdapter
-import grishalarin.testproject.ui.fragment.main.albums.params.AlbumParams
 import javax.inject.Inject
 
 /**

@@ -4,8 +4,8 @@ import android.content.Context
 import dagger.Component
 import grishalarin.api.ApiModule
 import grishalarin.localdb.LocalDbModule
-import grishalarin.testproject.ui.activity.main.MainScreenComponent
 import grishalarin.testproject.mvp.core.MvpProcessor
+import grishalarin.testproject.ui.activity.main.MainScreenComponent
 import javax.inject.Singleton
 
 /**

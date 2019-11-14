@@ -11,7 +11,7 @@ class MainPresenter @Inject constructor(viewState: MainViewState) :
 
     override fun onInitialize() {}
 
-    fun onScreenShow(){
+    fun onScreenShow() {
         view.onNavigateToEntryPoint()
     }
 }

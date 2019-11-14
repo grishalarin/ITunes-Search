@@ -3,7 +3,7 @@ package grishalarin.api.appinfo
 /**
  * @author Sostavkin Grisha
  */
-class ApplicationInfo (
+class ApplicationInfo(
     val isDebug: Boolean,
     val applicationId: String,
     val buildType: String,

@@ -2,7 +2,6 @@ package grishalarin.testproject.ui.fragment.main.albums.mapper
 
 import grishalarin.api.model.AlbumsResponse
 import grishalarin.localdb.model.Album
-import grishalarin.testproject.ui.fragment.main.album.AlbumPresenter
 import java.text.SimpleDateFormat
 import java.util.*
 import javax.inject.Inject
@@ -44,11 +43,11 @@ class AlbumsMapper @Inject constructor() {
         return item
     }
 
-    private fun convertStringToDate(date: String): Date{
+    private fun convertStringToDate(date: String): Date {
         return SimpleDateFormat(DATE_FORMAT, Locale.getDefault()).parse(date)!!
     }
 
-    companion object{
+    companion object {
         private const val DATE_FORMAT = "yyyy-MM-dd'T'HH:mm:ss'Z'"
     }
 

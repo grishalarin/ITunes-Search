@@ -1,8 +1,10 @@
 package grishalarin.testproject.ui.fragment.base;
 
 import android.os.Bundle;
+
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
 import grishalarin.testproject.AppComponent;
 import grishalarin.testproject.mvp.MvpDelegate;
 import grishalarin.testproject.mvp.view.MvpView;

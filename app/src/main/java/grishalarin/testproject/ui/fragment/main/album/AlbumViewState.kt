@@ -10,10 +10,10 @@ import javax.inject.Inject
  */
 class AlbumViewState @Inject constructor() : BaseMvpViewState<AlbumView>(), AlbumView {
 
-    private var albumParams:AlbumParams? = null
+    private var albumParams: AlbumParams? = null
 
     override fun onViewAttached(view: AlbumView?) {
-        if (albumParams != null){
+        if (albumParams != null) {
             setDataToViews(albumParams!!)
         }
     }

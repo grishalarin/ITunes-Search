@@ -8,4 +8,4 @@ import javax.inject.Singleton
  */
 @Singleton
 @Component(modules = [ApiModule::class])
-interface ApiComponentImpl: ApiComponent
+interface ApiComponentImpl : ApiComponent
